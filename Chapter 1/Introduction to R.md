@@ -18,11 +18,13 @@
  
  **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
 
-### Getting help
+## Getting help
 ---
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.2.PNG)
 
-
+## Input and output
+---
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.3.PNG)
 
 
 
