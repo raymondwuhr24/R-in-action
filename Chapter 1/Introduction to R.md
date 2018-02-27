@@ -15,7 +15,7 @@
  q()
 ```
  
- **demo(graphics)**  
+ **demo(graphics)**  demo  
  **demo(Hershey)**  
  **demo(persp)**   
  **demo(image)**  
