@@ -14,11 +14,7 @@
  plot(age,weight)
  q()
 ```
- 
- **demo(graphics)**  demo  
- **demo(Hershey)**  
- **demo(persp)**   
- **demo(image)**  
+ > demo: **demo(graphics)**   **demo(Hershey)**   **demo(persp)**    **demo(image)**  
 
 ## Getting help
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.2.PNG)
