@@ -20,7 +20,7 @@ demo(graphics) demo(Hershey) demo(persp) demo(image)
 
 ### Getting help
 ---
-![][https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.2.PNG]
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.2.PNG)
 
 
 
