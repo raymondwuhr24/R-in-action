@@ -1,7 +1,7 @@
 # Chapter 1 Introduction to R
 
 ## Getting started 
-###Listing 1.1 A sample R session
+### Listing 1.1 A sample R session
 ---
 ```R
  age <- c(1,3,5,2,11,9,3,9,12,3)
@@ -19,8 +19,10 @@
 demo(graphics) demo(Hershey) demo(persp) demo(image)
 
 ### Getting help
-
-
+---
+|Function|Action|
+|help.start()|General help.|
+|help("foo") or ?foo|Help on function foo (the quotation marks are optional).|
 
 
 
