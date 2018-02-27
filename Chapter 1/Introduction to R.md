@@ -20,12 +20,7 @@ demo(graphics) demo(Hershey) demo(persp) demo(image)
 
 ### Getting help
 ---
-|Function|Action|
-|--------|------|
-|help.start()|General help.
-|help("foo") or ?foo|Help on function foo (the quotation marks are optional).
-
-
+![][table1.2.PNG]
 
 
 
