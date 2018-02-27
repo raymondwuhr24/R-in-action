@@ -1,8 +1,7 @@
-# R in action
-## Chapter 1 Introduction to R
-### Getting started 
+# Chapter 1 Introduction to R
 
-####Listing 1.1 A sample R session
+## Getting started 
+###Listing 1.1 A sample R session
 ---
 ```R
  age <- c(1,3,5,2,11,9,3,9,12,3)
@@ -16,8 +15,35 @@
  plot(age,weight)
  q()
 ```
-    没啥好说的，基本语句  
-    
-    
-    
-    
+ 
+demo(graphics) demo(Hershey) demo(persp) demo(image)
+
+### Getting help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
