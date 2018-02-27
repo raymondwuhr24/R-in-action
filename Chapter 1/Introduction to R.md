@@ -2,7 +2,7 @@
 ## Chapter 1 Introduction to R
 ### Getting started 
 
-Listing 1.1 A sample R session
+####Listing 1.1 A sample R session
 ---
 ```R
  age <- c(1,3,5,2,11,9,3,9,12,3)
@@ -16,4 +16,8 @@ Listing 1.1 A sample R session
  plot(age,weight)
  q()
 ```
-
+    没啥好说的，基本语句  
+    
+    
+    
+    
