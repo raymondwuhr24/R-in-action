@@ -20,7 +20,7 @@ demo(graphics) demo(Hershey) demo(persp) demo(image)
 
 ### Getting help
 ---
-![][table1.2.PNG]
+![][table1.2]
 
 
 
