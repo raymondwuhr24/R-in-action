@@ -16,7 +16,7 @@
  q()
 ```
  
- Demo: **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
+ **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
 
 ### Getting help
 ---
