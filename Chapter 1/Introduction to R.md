@@ -16,7 +16,7 @@
  q()
 ```
  
-demo(graphics) demo(Hershey) demo(persp) demo(image)
+> Demo: **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
 
 ### Getting help
 ---
