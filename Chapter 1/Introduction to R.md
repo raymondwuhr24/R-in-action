@@ -16,9 +16,7 @@
  q()
 ```
  
-> Demo: **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
-
-**demo**
+ Demo: **demo(graphics)** **demo(Hershey)**  **demo(persp)**  **demo(image)**
 
 ### Getting help
 ---
