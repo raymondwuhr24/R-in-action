@@ -59,7 +59,17 @@ summary(lmfit)                   #displays a summary of the results
 plot(lmfit)                      #produces diagnostic plots
 cook<-cooks.distance(lmfit)      #generates influence statistics
 plot(cook) 
-
+```
+## Working through an example
+```R
+help.start()                  #Open the general help
+install.packages("vcd")       #Install the vcd package
+help(package="vcd")           #List the functions and datasets available in this package
+library(vcd)                  #Load the package
+help(Arthritis)               #Read the description of the dataset Arthritis
+Arthritis                     #Print out the Arthritis dataset
+example(Arthritis)            #Run the example that comes with the Arthritis dataset 
+```
 
 
 
