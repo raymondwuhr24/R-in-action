@@ -23,9 +23,9 @@
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.3.PNG)
 
 ## Input and output  
-**Input** source("filename") function submits a script to the current session.
-**Text Output** sink("filename")function redirects output to the filename.
-**Graphic Output** 
+**Input** source("filename") function submits a script to the current session.  
+**Text Output** sink("filename")function redirects output to the filename.  
+**Graphic Output**   
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table1.4.PNG)
 
 
