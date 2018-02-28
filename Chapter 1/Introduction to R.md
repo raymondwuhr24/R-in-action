@@ -54,8 +54,7 @@ There are some common mistakes made frequently by both beginning and experienced
 ## Using output as input—reusing results
 One of the most useful design features of R is that the output of analyses can easily be saved and used as input to additional analyses.
 ```R
-lmfit <- lm(mpg~wt, data=mtcars) #linear regression predicting miles per gallon 
-                                 #(mpg) from car weight(wt), using the automotive dataset mtcars
+lmfit <- lm(mpg~wt, data=mtcars) #linear regression predicting miles per gallon (mpg) from car weight(wt), using the automotive dataset mtcars
 summary(lmfit)                   #displays a summary of the results
 plot(lmfit)                      #produces diagnostic plots
 cook<-cooks.distance(lmfit)      #generates influence statistics
