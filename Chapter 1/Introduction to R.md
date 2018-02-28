@@ -51,10 +51,15 @@ There are some common mistakes made frequently by both beginning and experienced
 * Using the \ in a pathname on Windows —R sees the backslash character as an escape character. setwd("c:\mydata") generates an error. Use setwd("c:/mydata") or setwd("c:\\mydata") instead.
 * Using a function from a package that’s not loaded —The function order. clusters() is contained in the gclus package. If you try to use it before loading the package, you’ll get an error.
 
-
-
-
-
+## Using output as input—reusing results
+One of the most useful design features of R is that the output of analyses can easily be saved and used as input to additional analyses.
+```R
+lmfit <- lm(mpg~wt, data=mtcars) #linear regression predicting miles per gallon 
+                                 #(mpg) from car weight(wt), using the automotive dataset mtcars
+summary(lmfit)                   #displays a summary of the results
+plot(lmfit)                      #produces diagnostic plots
+cook<-cooks.distance(lmfit)      #generates influence statistics
+plot(cook) 
 
 
 
