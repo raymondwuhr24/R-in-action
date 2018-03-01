@@ -60,34 +60,98 @@ A data frame is more general than a matrix in that different columns can contain
 **Format**  
 `mydata <- data.frame(col1, col2, col3,…)`
 where `col1, col2, col3, …` are column vectors of any type (such as character, numeric, or logical). Names for each column can be provided with the `names` function.  
-![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/list2.4.PNG)
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/list2.4.PNG)  
+There are several ways to identify the elements of a data frame.
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/list2.5.PNG)   
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.5.PNG)   
 
+The $ notation is used to indicate a particular variable from a given data frame.  
 
+**Example** If you want to cross tabulate diabetes type by status, you could use the following code:  
+```R
+table(patientdata$diabetes, patientdata$status)
+```
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.6.PNG) 
 
+`ATTACH, DETACH, AND WITH`  
+The `attach()` function adds the data frame to the R search path. When a variable name is encountered, data frames in the search path are checked in order to locate the variable.  
+The `detach()` function removes the data frame from the search path.    
+```R
+summary(mtcars$mpg)
+plot(mtcars$mpg, mtcars$disp)
+plot(mtcars$mpg, mtcars$wt)
+```
+This could also be written as   
+```R
+attach(mtcars)
+summary(mpg)
+plot(mpg, disp)
+plot(mpg, wt)
+detach(mtcars)
+```
+**The limitations with this approach are evident when more than one object can have the same name.**  
+An alternative approach is to use the `with()` function.  
+```R
+with(mtcars, {
+summary(mpg, disp, wt)
+plot(mpg, disp)
+plot(mpg, wt)
+})
+```
+**The limitation of the with() function is that assignments will only exist within the function brackets.**   
 
+If you need to create objects that will exist outside of the with() construct, use the special assignment operator <<- instead of the standard one (<-). It will save the object to the global environment outside of the with() call.
+**Example**  
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.7.PNG)   
 
+**CASE IDENTIFIERS**   
+In R, case identifiers can be specified with a `rowname` option in the data frame function
 
+```R
+patientdata <- data.frame(patientID, age, diabetes, status,row.names=patientID)
+```   
+specifies `patientID` as the variable to use in labeling cases on various printouts and graphs produced by R   
 
+### Factors  
+Categorical (nominal) and ordered categorical (ordinal) variables in R are called factors.  
+The function `factor()` stores the categorical values as a vector of integers in the range [1... k] (where k is the number of unique values in the nominal variable), and an internal vector of character strings (the original values) mapped to these integers.  
+**Example**  
+```R
+diabetes <- c("Type1", "Type2", "Type1", "Type1")
+diabetes <- factor(diabetes)  #stores this vector as (1, 2, 1, 1) and associates it with 1=Type1 and 2=Type2 internally
+status <- c("Poor", "Improved", "Excellent", "Poor")
+status <- factor(status, ordered=TRUE)  #encode the vector as (3, 2, 1, 3) and associate these values internally as 1=Excellent, 2=Improved, and 3=Poor.
+```
+In order to assign the factor levels by ourselves, we can use `levels` inside the `factor()` function.  
+`status <- factor(status, order=TRUE, levels=c("Poor", "Improved", "Excellent"))`  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Example**
+```R
+patientID <- c(1, 2, 3, 4) q
+age <- c(25, 34, 28, 52)
+diabetes <- c("Type1", "Type2", "Type1", "Type1")
+status <- c("Poor", "Improved", "Excellent", "Poor")
+diabetes <- factor(diabetes)
+status <- factor(status, order=TRUE)
+patientdata <- data.frame(patientID, age, diabetes, status) 
+str(patientdata)             #Display object structure
+summary(patientdata)         #Display object summary
+```
+### Lists
+A list is an ordered collection of objects (components).  
+**Format**  
+`mylist <- list(object1, object2, …)  
+mylist <- list(name1=object1, name2=object2, …)`
+**Example**
+```R
+g <- "My First List"
+h <- c(25, 26, 18, 39)
+j <- matrix(1:10, nrow=5)
+k <- c("one", "two", "three")
+mylist <- list(title=g, ages=h, j, k)
+mylist
+```
+## Data input
 
 
 
