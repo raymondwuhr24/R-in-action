@@ -61,8 +61,10 @@ A data frame is more general than a matrix in that different columns can contain
 `mydata <- data.frame(col1, col2, col3,…)`
 where `col1, col2, col3, …` are column vectors of any type (such as character, numeric, or logical). Names for each column can be provided with the `names` function.  
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/list2.4.PNG)  
-There are several ways to identify the elements of a data frame.
+
+There are several ways to identify the elements of a data frame.  
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/list2.5.PNG) 
+
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.5.PNG) 
 
 The $ notation is used to indicate a particular variable from a given data frame.  
