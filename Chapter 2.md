@@ -153,7 +153,55 @@ k <- c("one", "two", "three")
 mylist <- list(title=g, ages=h, j, k)
 mylist
 ```
+
+**Note**
+* The period (.) has no special significance in object names. The dollar sign ($) can be usde to identify the parts of an object. For example, A$x refers to variable x in data frame A.  
+* R doesn’t provide multiline or block comments . You must start each line of a multiline comment with #.
+* Assigning a value to a nonexistent element of a vector, matrix, array, or list will expand that structure to accommodate the new value.  
+* R doesn’t have scalar values . Scalars are represented as one-elementvectors.  
+* Indices in R start at 1, not at 0.
+* **Variables can’t be declared. They come into existence on first assignment.**
+
 ## Data input
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.2.PNG)   
+
+### Entering data from the keyboard  
+The `edit()` function in R will invoke a text editor that will allow you to enter your data manually.  
+1  Create an empty data frame (or matrix) with the variable names and modes you want to have in the final dataset.  
+2  Invoke the text editor on this data object, enter your data, and save the results back to the data object.  
+```R
+mydata <- data.frame(age=numeric(0), gender=character(0), weight=numeric(0))
+mydata <- edit(mydata)
+```
+Assignments like `age=numeric(0)` create a variable of a specific mode, but without actual data. Note that the result of the editing is assigned back to the object itself. The `edit()` function operates on a copy of the object. If you don’t assign it a destination, all of your edits will be lost! **A shortcut for `mydata <- edit(mydata)` is simply `fix(mydata)`**.
+
+### Importing data from a delimited text file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
