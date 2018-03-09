@@ -143,7 +143,7 @@ summary(patientdata)         #Display object summary
 A list is an ordered collection of objects (components).  
 **Format**  
 `mylist <- list(object1, object2, …)  
-mylist <- list(name1=object1, name2=object2, …)`
+mylist <- list(name1=object1, name2=object2, …)`  
 **Example**
 ```R
 g <- "My First List"
