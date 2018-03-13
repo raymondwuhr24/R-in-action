@@ -8,8 +8,8 @@
     * [Data frames](#data-frames)
     * [Lists](#lists)
 * [Data input](#data-input)
-    * [Entering data from the keyboard](#entering-data-from-the-keyboard)  
-    * [Importing data from a delimited text file](#importing-data-from-a-delimited-text-file)
+    * [Entering data from the keyboard](#entering-data-from-the-keyboard)
+    * [Importing data from a delimited text file](#importing-data-from-a-delimited-text-file)
     
 
 ## Understanding datasets
