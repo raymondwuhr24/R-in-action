@@ -1,4 +1,16 @@
 # Chapter 2 Creating a dataset
+
+* [Understanding datasets](#Understanding datasets)
+* [Data structures](#Data structures)
+    * [Vectors](#Vectors]
+    * [Matrices](#Matrices)
+    * [Arrays](#Arrays)
+    * [Data frames](#Data frames)
+    * [Lists](#Lists)
+* [Data input](#Data input)
+    * [Entering data from the keyboard](#Entering data from the keyboard)
+    * [Importing data from a delimited text file](#Importing data from a delimited text file)
+
 ## Understanding datasets
 A dataset is usually a rectangular array of data with rows representing observations and columns representing variables
 
@@ -67,7 +79,7 @@ There are several ways to identify the elements of a data frame.
 
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.5.PNG) 
 
-The $ notation is used to indicate a particular variable from a given data frame.  
+The `$` notation is used to indicate a particular variable from a given data frame.  
 
 **Example** If you want to cross tabulate diabetes type by status, you could use the following code:  
 ```R
@@ -102,7 +114,7 @@ plot(mpg, wt)
 ```
 **The limitation of the with() function is that assignments will only exist within the function brackets.**   
 
-If you need to create objects that will exist outside of the with() construct, use the special assignment operator <<- instead of the standard one (<-). It will save the object to the global environment outside of the with() call.
+If you need to create objects that will exist outside of the with() construct, use the special assignment operator <<- instead of the standard one (<-). It will save the object to the global environment outside of the with() call.  
 **Example**  
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.7.PNG)   
 
@@ -129,7 +141,7 @@ In order to assign the factor levels by ourselves, we can use `levels` inside th
 
 **Example**
 ```R
-patientID <- c(1, 2, 3, 4) q
+patientID <- c(1, 2, 3, 4) 
 age <- c(25, 34, 28, 52)
 diabetes <- c("Type1", "Type2", "Type1", "Type1")
 status <- c("Poor", "Improved", "Excellent", "Poor")
@@ -158,7 +170,7 @@ mylist
 * The period (.) has no special significance in object names. The dollar sign ($) can be usde to identify the parts of an object. For example, A$x refers to variable x in data frame A.  
 * R doesn’t provide multiline or block comments . You must start each line of a multiline comment with #.
 * Assigning a value to a nonexistent element of a vector, matrix, array, or list will expand that structure to accommodate the new value.  
-* R doesn’t have scalar values . Scalars are represented as one-elementvectors.  
+* R doesn’t have scalar values . Scalars are represented as one-element vectors.  
 * Indices in R start at 1, not at 0.
 * **Variables can’t be declared. They come into existence on first assignment.**
 
