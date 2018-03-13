@@ -1,15 +1,15 @@
 # Chapter 2 Creating a dataset
 
-* [Understanding datasets](#Understanding datasets)
-* [Data structures](#Data structures)
-    * [Vectors](#Vectors]
-    * [Matrices](#Matrices)
-    * [Arrays](#Arrays)
-    * [Data frames](#Data frames)
-    * [Lists](#Lists)
-* [Data input](#Data input)
-    * [Entering data from the keyboard](#Entering data from the keyboard)
-    * [Importing data from a delimited text file](#Importing data from a delimited text file)
+* [Understanding datasets](#understanding datasets)
+* [Data structures](#data structures)
+    * [Vectors](#vectors)
+    * [Matrices](#matrices)
+    * [Arrays](#arrays)
+    * [Data frames](#data frames)
+    * [Lists](#lists)
+* [Data input](#data input)
+    * [Entering data from the keyboard](#entering data from the keyboard)
+    * [Importing data from a delimited text file](#importing data from a delimited text file)
 
 ## Understanding datasets
 A dataset is usually a rectangular array of data with rows representing observations and columns representing variables
