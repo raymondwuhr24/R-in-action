@@ -1,6 +1,6 @@
 # Chapter 2 Creating a dataset
 
-* [Understanding datasets](#understandingdatasets)
+* [Understanding datasets](#understanding)
 * [Data structures](#data structures)
     * [Vectors](#vectors)
     * [Matrices](#matrices)
