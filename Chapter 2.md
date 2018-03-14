@@ -205,7 +205,7 @@ By default, character variables are converted to factors. This behavior may not 
 
 R provides several mechanisms for accessing data via connections as well. For example, the functions `file()` , `gzfile()` , `bzfile()` , `xzfile()` , `unz()` , and `url()` can be used in place of the filename. See `help(file)` for details.
 
-###Importing data from Excel  
+### Importing data from Excel  
 The best way to read an Excel file is to export it to a comma-delimited file from within Excel and import it to R using the method described earlier.
 
 The `xlsx` package can be used to access spreadsheets in XLSX file.
@@ -221,10 +221,10 @@ workbook <- "c:/myworkbook.xlsx"
 mydataframe <- read.xlsx(workbook, 1)
 ```
 
-###Importing data from XML
+### Importing data from XML
 The `XML` package written by Duncan Temple Lang allows users to read, write, and manipulate XML files. See www.omegahat.org/RSXML for details.  
 
-###Webscraping
+### Webscraping
 One way  is to download the web page using the `readLines()` function and manipulate it with functions such as `grep()` and `gsub()` . For complex web pages, the `RCurl` and `XML` packages can be used to extract the information desired. For more information, including examples, see “Webscraping using readLines and RCurl,” available from the website Programming with R (www.programmingr.com).
 
 
