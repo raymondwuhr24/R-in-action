@@ -10,6 +10,10 @@
 * [Data input](#data-input)
     * [Entering data from the keyboard](#entering-data-from-the-keyboard)
     * [Importing data from a delimited text file](#importing-data-from-a-delimited-text-file)
+    * [Importing data from Excel](#importing-data-from-excel)
+    * [Importing data from XML](#importing-data-from-xml)
+    * [Webscraping](#webscraping)
+    
     
 
 ## Understanding datasets
@@ -167,7 +171,7 @@ mylist <- list(title=g, ages=h, j, k)
 mylist
 ```
 
-**Note**
+**Note**  
 * The period (.) has no special significance in object names. The dollar sign ($) can be usde to identify the parts of an object. For example, A$x refers to variable x in data frame A.  
 * R doesn’t provide multiline or block comments . You must start each line of a multiline comment with #.
 * Assigning a value to a nonexistent element of a vector, matrix, array, or list will expand that structure to accommodate the new value.  
@@ -177,7 +181,6 @@ mylist
 
 ## Data input
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.2.PNG)   
-
 ### Entering data from the keyboard  
 The `edit()` function in R will invoke a text editor that will allow you to enter your data manually.  
 1  Create an empty data frame (or matrix) with the variable names and modes you want to have in the final dataset.  
@@ -188,7 +191,89 @@ mydata <- edit(mydata)
 ```
 Assignments like `age=numeric(0)` create a variable of a specific mode, but without actual data. Note that the result of the editing is assigned back to the object itself. The `edit()` function operates on a copy of the object. If you don’t assign it a destination, all of your edits will be lost! **A shortcut for `mydata <- edit(mydata)` is simply `fix(mydata)`**.
 
-### Importing data from a delimited text file
+### Importing data from a delimited text file  
+The `read.table()` function reads a file in table format and saves it as a data frame.  
+```R
+mydataframe <- read.table(file, header=logical_value,sep="delimiter", row.names="name")
+```
+where `file` is a delimited ASCII file , `header` is a logical value indicating whether the first row contains variable names (TRUE or FALSE), `sep` specifies the delimiter separating data values, and `row.names` is an optional parameter specifying one or more variables to represent row identifiers.  
+
+**Note**  
+The sep parameter allows you to import files that use a symbol other than a comma to delimit the data values. You could read tab-delimited files with `sep="\t"`. The default is `sep=""`, which denotes one or more spaces, tabs, new lines, or carriage returns.
+
+By default, character variables are converted to factors. This behavior may not always be desirable (for example, a variable containing respondents’ comments). You can suppress this behavior in a number of ways. Including the option `stringsAsFactors=FALSE` will turn this behavior off for all character variables. Alternatively, you can use the `colClasses` option to specify a class (for example, logical, numeric, character, factor) for each column.
+
+R provides several mechanisms for accessing data via connections as well. For example, the functions `file()` , `gzfile()` , `bzfile()` , `xzfile()` , `unz()` , and `url()` can be used in place of the filename. See `help(file)` for details.
+
+###Importing data from Excel  
+The best way to read an Excel file is to export it to a comma-delimited file from within Excel and import it to R using the method described earlier.
+
+The `xlsx` package can be used to access spreadsheets in XLSX file.
+**Format**
+```R
+read.xlsx(file, n)
+```
+`file` is the path and `n` is the number of the worksheet to be imported.  
+**Example**
+```R
+library(xlsx)
+workbook <- "c:/myworkbook.xlsx"
+mydataframe <- read.xlsx(workbook, 1)
+```
+
+###Importing data from XML
+The `XML` package written by Duncan Temple Lang allows users to read, write, and manipulate XML files. See www.omegahat.org/RSXML for details.  
+
+###Webscraping
+One way  is to download the web page using the `readLines()` function and manipulate it with functions such as `grep()` and `gsub()` . For complex web pages, the `RCurl` and `XML` packages can be used to extract the information desired. For more information, including examples, see “Webscraping using readLines and RCurl,” available from the website Programming with R (www.programmingr.com).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
