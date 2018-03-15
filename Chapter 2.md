@@ -13,8 +13,12 @@
     * [Importing data from Excel](#importing-data-from-excel)
     * [Importing data from XML](#importing-data-from-xml)
     * [Webscraping](#webscraping)
-    
-    
+    * [Accessing database management systems](#accessing-database-management-systems)
+    * [Importing data via Stat/Transfer](#importing-data-via-stat-transfer)
+* [Annotating datasets](#annotating-datasets)
+    * [Variable labels](#variable labels)
+
+
 
 ## Understanding datasets
 A dataset is usually a rectangular array of data with rows representing observations and columns representing variables
@@ -227,11 +231,45 @@ The `XML` package written by Duncan Temple Lang allows users to read, write, and
 ### Webscraping
 One way  is to download the web page using the `readLines()` function and manipulate it with functions such as `grep()` and `gsub()` . For complex web pages, the `RCurl` and `XML` packages can be used to extract the information desired. For more information, including examples, see “Webscraping using readLines and RCurl,” available from the website Programming with R (www.programmingr.com).
 
+### Accessing database management systems
+**THE ODBC INTERFACE**
+The most popular method of accessing a DBMS in R is through the `RODBC` package, which allows R to connect to any DBMS that has an ODBC driver.   
+1. install and configure the appropriate ODBC driver for your platform and database  
+2. install the `RODBC` package  
+![](https://github.com/raymondwuhr24/R-in-action/Printscreen/table2.2.PNG)   
+**Example**
+```R
+library(RODBC)
+myconn <-odbcConnect("mydsn", uid="Rob", pwd="aardvark")
+crimedat <- sqlFetch(myconn, Crime)
+pundat <- sqlQuery(myconn, "select * from Punishment")
+close(myconn)
+```
+Load the `RODBC` package and open a connection to the ODBC database through a registered data source name `(mydsn)` with a security UID `(rob)` and password `(aardvark)`. The connection string is passed to `sqlFetch`, which copies the table `Crime` into the R data frame `crimedat` . Then run the SQL `select` statement against the table `Punishment` and save the results to the data frame `pundat` . Finally, close the connection.    
+The `sqlQuery()` function is very powerful because any valid SQL statement can be inserted. This flexibility allows you to select specific variables, subset the data, create new variables, and recode and rename existing variables.
+
+### Importing data via Stat/Transfer
+Stat/Transfer (www.stattransfer.com) is a stand-alone application that can transfer data between 34 data formats, including R.  
+![](https://github.com/raymondwuhr24/R-in-action/Printscreen/figure2.4.PNG) 
+
+## Annotating datasets
+### Variable labels
 
 
 
 
+### Value labels
+The `factor()` function can be used to create value labels for categorical variables.
+**Example**
+```R
+patientdata$gender <- factor(patientdata$gender,
+levels = c(1,2),
+labels = c("male", "female"))
+```
+Here `levels` indicate the actual values of the variable, and `labels` refer to a character vector containing the desired labels.
 
+## Useful functions
+![](https://github.com/raymondwuhr24/R-in-action/Printscreen/table2.3.PNG)
 
 
 
