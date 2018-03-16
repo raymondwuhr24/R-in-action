@@ -17,8 +17,8 @@
     * [Importing data via Stat/Transfer](#importing-data-via-stattransfer)
 * [Annotating datasets](#annotating-datasets)  
     * [Variable labels](#variable-labels)
-
-
+    * [Value labels](#value-labels)
+* [Useful functions](#useful-functions)
 
 ## Understanding datasets
 A dataset is usually a rectangular array of data with rows representing observations and columns representing variables
