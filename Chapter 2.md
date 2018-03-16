@@ -14,7 +14,7 @@
     * [Importing data from XML](#importing-data-from-xml)
     * [Webscraping](#webscraping)
     * [Accessing database management systems](#accessing-database-management-systems)
-    * [Importing data via Stat/Transfer](#importing-data-via-stat/transfer)
+    * [Importing data via Stat/Transfer](#importing-data-via-stattransfer)
 * [Annotating datasets](#annotating-datasets)
     * [Variable labels](#variable labels)
 
