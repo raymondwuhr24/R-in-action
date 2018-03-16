@@ -15,8 +15,8 @@
     * [Webscraping](#webscraping)
     * [Accessing database management systems](#accessing-database-management-systems)
     * [Importing data via Stat/Transfer](#importing-data-via-stattransfer)
-* [Annotating datasets](#annotating-datasets)
-    * [Variable labels](#variable labels)
+* [Annotating datasets](#annotating-datasets)  
+    * [Variable labels](#variable-labels)
 
 
 
@@ -184,7 +184,7 @@ mylist
 * **Variables can’t be declared. They come into existence on first assignment.**
 
 ## Data input
-![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.2.PNG)   
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/2.2.PNG)
 ### Entering data from the keyboard  
 The `edit()` function in R will invoke a text editor that will allow you to enter your data manually.  
 1  Create an empty data frame (or matrix) with the variable names and modes you want to have in the final dataset.  
@@ -235,8 +235,8 @@ One way  is to download the web page using the `readLines()` function and manipu
 **THE ODBC INTERFACE**
 The most popular method of accessing a DBMS in R is through the `RODBC` package, which allows R to connect to any DBMS that has an ODBC driver.   
 1. install and configure the appropriate ODBC driver for your platform and database  
-2. install the `RODBC` package  
-![](https://github.com/raymondwuhr24/R-in-action/Printscreen/table2.2.PNG)   
+2. install the `RODBC` package   
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table2.2.PNG)   
 **Example**
 ```R
 library(RODBC)
@@ -250,7 +250,7 @@ The `sqlQuery()` function is very powerful because any valid SQL statement can b
 
 ### Importing data via Stat/Transfer
 Stat/Transfer (www.stattransfer.com) is a stand-alone application that can transfer data between 34 data formats, including R.  
-![](https://github.com/raymondwuhr24/R-in-action/Printscreen/figure2.4.PNG) 
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/figure2.4.PNG) 
 
 ## Annotating datasets
 ### Variable labels
@@ -269,7 +269,7 @@ labels = c("male", "female"))
 Here `levels` indicate the actual values of the variable, and `labels` refer to a character vector containing the desired labels.
 
 ## Useful functions
-![](https://github.com/raymondwuhr24/R-in-action/Printscreen/table2.3.PNG)
+![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table2.3.PNG)
 
 
 
