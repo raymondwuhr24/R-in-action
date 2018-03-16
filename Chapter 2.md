@@ -254,9 +254,7 @@ Stat/Transfer (www.stattransfer.com) is a stand-alone application that can trans
 
 ## Annotating datasets
 ### Variable labels
-
-
-
+One approach is to use the variable label as the variable’s name and then refer to the variable by its position index.
 
 ### Value labels
 The `factor()` function can be used to create value labels for categorical variables.
@@ -270,94 +268,3 @@ Here `levels` indicate the actual values of the variable, and `labels` refer to 
 
 ## Useful functions
 ![](https://github.com/raymondwuhr24/R-in-action/blob/master/Printscreen/table2.3.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
