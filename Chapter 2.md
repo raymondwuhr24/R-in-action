@@ -15,9 +15,9 @@
     * [Webscraping](#webscraping)
     * [Accessing database management systems](#accessing-database-management-systems)
     * [Importing data via Stat/Transfer](#importing-data-via-stattransfer)
-* [Annotating datasets](#annotating-datasets)  
-    * [Variable labels](#variable-labels)
-    * [Value labels](#value-labels)
+* [Annotating datasets](#annotating-datasets)
+    * [Variable labels](#variable-labels)
+    * [Value labels](#value-labels)
 * [Useful functions](#useful-functions)
 
 ## Understanding datasets
