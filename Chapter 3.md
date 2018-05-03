@@ -3,6 +3,7 @@
 * [Working with graphs](#working-with-graphs)
 * [A simple example](#a-simple-example)
 * [Graphical parameters](#graphical-parameters)
+    * [Symbols and lines](#symbols-and-lines)
 
 
 
@@ -42,7 +43,7 @@ plot(dose, drugA, type="b")
 ## Graphical parameters
 
 
-
+### Symbols and lines
 
 
 
